@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>explore more event</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <input type="text" id="input-fild">
+    <button id="btn">click Me</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function () {
+            // console.log('button triggered');
+        })
+        document.getElementById('btn').addEventListener('mouseenter', function () {
+            // console.log('hovering input button');
+        })
+        document.getElementById('btn').addEventListener('mousemove', function () {
+            // console.log('mouse moveing input button');
+        })
+        
+        document.getElementById('input-fild').addEventListener('focus', function () {
+            // console.log('focus input filed');
+        })
+        document.getElementById('input-fild').addEventListener('blur', function () {
+            // console.log('blur input filed');
+        })
+        document.getElementById('input-fild').addEventListener('keypress', function (event) {
+            // console.log(event.target.value);
+        })
+        document.getElementById('input-fild').addEventListener('keydown', function (event2) {
+            // console.log(event2.target.value);
+        })
+        document.getElementById('input-fild').addEventListener('keyup', function (event3) {
+            console.log(event3.target.value);
+        })
+
+
+    </script>
+</body>
+</html>
