@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event summery</title>
+</head>
+<body>
+    <h1 id="head">default text </h1>
+    <!-- method 1  -->
+    <button onclick="changeText()">Click me to change head text</button>
+    <button id="change-color">Click me to change head color</button>
+
+
+    <p id="input-title">Default Text</p>
+    <input id="input-fild" type="text">
+    <button id="input-button">Click me </button>
+
+    <script>
+        //1
+        function changeText() {
+            document.getElementById('head').innerText='text changed'
+        }
+
+        //2
+        document.getElementById('change-color').addEventListener('click', function () {
+            document.getElementById('head').style.color='tomato'
+        })
+
+        // 2 recap
+
+        document.getElementById('input-button').addEventListener('click', function () {
+            const inputFild =document.getElementById('input-fild');
+            const inputText = inputFild.value;
+            const inputTitle = document.getElementById('input-title');
+            inputTitle.innerText = inputText;
+            inputFild.value = '';
+            
+        })
+    </script>
+</body>
+</html>
