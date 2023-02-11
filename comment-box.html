@@ -7,6 +7,40 @@
     <title>comment box</title>
 </head>
 <body>
-    
+    <h1>Leave Your Comment</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti at quisquam repellat repellendus tenetur minima? Eos repudiandae nihil ut, error reiciendis nostrum necessitatibus repellendus eius iure velit, commodi aliquam tenetur voluptate voluptatem. Voluptas hic quo tempora. Iste, iusto vero odio veritatis exercitationem autem dolore expedita maxime illum? Aliquid, harum cumque.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti at quisquam repellat repellendus tenetur minima? Eos repudiandae nihil ut, error reiciendis nostrum necessitatibus repellendus eius iure velit, commodi aliquam tenetur voluptate voluptatem. Voluptas hic quo tempora. Iste, iusto vero odio veritatis exercitationem autem dolore expedita maxime illum? Aliquid, harum cumque.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti at quisquam repellat repellendus tenetur minima? Eos repudiandae nihil ut, error reiciendis nostrum necessitatibus repellendus eius iure velit, commodi aliquam tenetur voluptate voluptatem. Voluptas hic quo tempora. Iste, iusto vero odio veritatis exercitationem autem dolore expedita maxime illum? Aliquid, harum cumque.</p>
+    </div>
+    <div>
+        <textarea name="comment" id="comment-box" cols="60" rows="5"></textarea>
+        <br>
+        <input type="submit" value="Post" id="submit">
+    </div>
+
+    <script>
+        
+        /*
+        const submit = document.getElementById('submit');
+        submit.addEventListener('click', function () {
+            const comment =document.createElement('p');
+            comment.innerText=commentBox.value;
+            commentContainer.appendChild(comment)
+            commentBox.value='';
+        })
+        const commentBox =document.getElementById('comment-box');
+        const commentContainer =document.getElementById('comment-container');
+        */
+
+        // same in one line
+        document.getElementById('submit').addEventListener('click', function () {
+            const comment =document.createElement('p')
+            comment.innerText=document.getElementById('comment-box').value;
+            document.getElementById('comment-container').appendChild(comment)
+            document.getElementById('comment-box').value='';
+        })
+
+    </script>
 </body>
 </html>
