@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+
+<body>
+    <h1>Delegate</h1>
+
+    <ul id="list-container">
+        <li class="list-item">Magnam iste dignissimos consequatur saepe?</li>
+        <li class="list-item">Magnam iste dignissimos consequatur saepe?</li>
+        <li class="list-item">Eius atque modi unde adipisci!</li>
+        <li class="list-item">Ullam natus consectetur in asperiores!</li>
+        <li class="list-item">Lorem ipsum dolor sit amet.</li>
+        <li class="list-item">Tempore mollitia maxime culpa! Dolorum!</li>
+    </ul>
+    <button id="add-li">Add More List Item</button>
+
+    <script>
+        /*
+        const listItems = document.getElementsByClassName('list-item');
+        for (const item of listItems) {
+            item.addEventListener('click', function (event) {
+                event.target.parentNode.removeChild(event.target)
+            })
+        }
+        */
+       
+        const listContainer = document.getElementById('list-container');
+        listContainer.addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target)
+        })
+        const addButton = document.getElementById('add-li');
+        
+        addButton.addEventListener('click', function () {
+            const newList = document.createElement('li');
+            newList.innerText = 'new list item here';
+            listContainer.appendChild(newList);   
+        })
+
+
+        
+
+    </script>
+</body>
+
+</html>
